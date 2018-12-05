@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:background="@drawable/logophatt">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="319dp"
+        android:layout_height="196dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/usernameText"
+            android:layout_width="240dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="76dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="76dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:fontFamily="cursive"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:textColor="#ffffff"/>
+
+        <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="240dp"
+            android:layout_height="41dp"
+            android:layout_marginBottom="231dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="76dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="76dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textColor="#ffffff"
+            app:fontFamily="cursive"
+            app:layout_constraintBottom_toTopOf="@+id/botaobuscar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="235dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginLeft="76dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="24dp"
+            android:text="Username"
+            android:textColor="#ffffff"
+            app:fontFamily="cursive"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/usernameText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="95dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="181dp"
+            android:layout_marginLeft="76dp"
+            android:layout_marginRight="181dp"
+            android:layout_marginStart="76dp"
+            android:text="Password"
+            android:textColor="#ffffff"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="18sp"
+            app:fontFamily="cursive"
+            app:layout_constraintBottom_toTopOf="@+id/passwordText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usernameText" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="110dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="184dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginLeft="229dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginStart="229dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"
+            android:text="Entrar"
+            app:fontFamily="cursive"
+            app:layout_constraintBottom_toTopOf="@+id/botaobuscar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordText" />
+
+        <Button
+            android:id="@+id/cadastrarButton"
+            android:layout_width="110dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginLeft="86dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginStart="86dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/buttonshape"
+            android:text="Cadastro"
+            android:onClick="abrirTelaCadastroUsuario"
+            app:fontFamily="cursive"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/loginButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordText" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="199dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginContainer">
+
+        <Button
+            android:id="@+id/btnCadastrarPet"
+            android:layout_width="144dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/buttonshape"
+            android:text="Cadastrar Pet"
+            app:fontFamily="cursive"
+            android:textColor="#ffffff"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <Button
+            android:id="@+id/btnChamados"
+            android:layout_width="144dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="142dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/buttonshape"
+            android:text="Chamados"
+            android:visibility="invisible"
+            app:fontFamily="cursive"
+            app:layout_constraintStart_toEndOf="@+id/botaobuscar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/botaobuscar"
+            android:layout_width="144dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/buttonshape"
+            android:text="Buscar Pets"
+            android:visibility="invisible"
+            app:fontFamily="cursive"
+            app:layout_constraintTop_toBottomOf="@+id/botaoSelecao"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <Button
+            android:id="@+id/botaoSelecao"
+            android:layout_width="144dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/buttonshape"
+            android:text="Seleção de Serviço"
+            app:fontFamily="cursive"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/btnCadastrarPet"
+            tools:layout_editor_absoluteX="4dp" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
