@@ -1,6 +1,8 @@
 package com.example.raphael.pettransport.activities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
@@ -42,7 +44,22 @@ public class ActivityCadastroUsuario extends Activity {
                     pessoaJson.tipoPessoa(TipoPessoa.MOTORISTA);
                 }
                 usuarioService.salvarPessoa(pessoaJson);
-                finish();
+                AlertDialog.Builder alerta = new AlertDialog.Builder(ActivityCadastroUsuario.this);
+                alerta.setTitle("Aviso");
+                alerta.setIcon(R.mipmap.ic_launcher);
+                alerta.setMessage("Cadastrado com Sucesso!");
+                alerta.setCancelable(false);
+                alerta.setNegativeButton("OK", new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        }
+                );
+                AlertDialog alertDialog = alerta.create();
+                alertDialog.show();
+                //finish();
             }
         });
     }

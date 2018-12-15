@@ -1,7 +1,9 @@
 package com.example.raphael.pettransport.activities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.raphael.pettransport.R;
 import com.example.raphael.pettransport.models.ChamadoJson;
@@ -88,10 +91,30 @@ public class MainActivity extends AppCompatActivity {
                     botaoVisivel.setVisibility(View.VISIBLE);
                     botaoChamados.setVisibility(View.VISIBLE);
 
+
                     ConstraintLayout loginContainer = findViewById(R.id.loginContainer);
                     loginContainer.setVisibility(View.INVISIBLE);
+                }else {
+                    AlertDialog.Builder alerta = new AlertDialog.Builder(MainActivity.this);
+                    alerta.setTitle("Aviso");
+                    alerta.setIcon(R.mipmap.ic_launcher);
+                    alerta.setMessage("USUARIO NÃO EXISTENTE OU SENHA INCORRETA!");
+                    alerta.setCancelable(false);
+                    alerta.setNegativeButton("OK", new DialogInterface.OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            }
+                    );
+                    AlertDialog alertDialog = alerta.create();
+                    alertDialog.show();
+
+
                 }
             }
+
         });
 
     }

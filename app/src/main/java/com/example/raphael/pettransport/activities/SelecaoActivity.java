@@ -2,7 +2,9 @@ package com.example.raphael.pettransport.activities;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
@@ -104,8 +106,23 @@ public class SelecaoActivity extends Activity {
                     }
                     if (Contexto.chamado.latitude() != null) {
                         chamadoService.salvarChamado(Contexto.chamado);
-                        finish();
-                        //showMessage(getApplicationContext(), "Info", "Seu pedido já foi emitido, aguarde até um candango lhe buscar");
+                        AlertDialog.Builder alerta = new AlertDialog.Builder(SelecaoActivity.this);
+                        alerta.setTitle("Aviso");
+                        alerta.setIcon(R.mipmap.ic_launcher);
+                        alerta.setMessage("Serviço enviado!");
+                        alerta.setCancelable(false);
+                        alerta.setNegativeButton("OK", new DialogInterface.OnClickListener() {
+
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                                    }
+                                }
+                        );
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                        //finish();
+
                     }
                 }
 
