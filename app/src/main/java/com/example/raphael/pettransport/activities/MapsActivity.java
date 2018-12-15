@@ -62,7 +62,7 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         this.chamados = new HashMap<>();
-        LatLng chamadoCentro = null;
+        LatLng chamadoCentro = new LatLng(-23.1791,-45.8872);
         for (ChamadoJson chamadoJson : this.chamadoService.obterChamadosPendentes()) {
             LatLng latLng = new LatLng(chamadoJson.latitude(), chamadoJson.longitude());
             if (chamadoCentro == null) {
