@@ -85,7 +85,7 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
 
         }
 
-       /* mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker) {
                 ChamadoJson chamadoJson = chamados.get(marker.getPosition());
@@ -94,7 +94,7 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
                 chamadoService.salvarChamado(chamadoJson);
                 marker.remove();
             }
-        });*/
+        });
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(chamadoCentro));
         mMap.setInfoWindowAdapter(new CustomInfoWindowAdapter(MapsActivity.this.getContext()));
