@@ -20,7 +20,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class ApiConnection {
     private static final String USER_AGENT = "Mozilla/5.0";
 
-    public static String URL_BASE = "http://192.168.1.102:8080";
+    public static String URL_BASE = "http://raspahub.xyz:6924";
 
     public String sendGet(String url) throws Exception {
         return this.sendHttp(new URL(URL_BASE + url), "GET", null);
