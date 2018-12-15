@@ -23,38 +23,45 @@
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
-                android:textColor="#ffffff"
                 android:layout_height="wrap_content"
                 android:text="Lista de chamados"
-                app:fontFamily="cursive" />
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                app:fontFamily="sans mono" />
 
             <ListView
                 android:id="@+id/listChamados"
                 android:layout_width="match_parent"
+                android:layout_height="244dp"
+                android:background="#ffffff"
                 android:textColor="#ffffff"
-                android:layout_height="319dp" />
+                app:fontFamily="sans mono" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
+            android:layout_width="139dp"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
+            android:layout_marginLeft="245dp"
+            android:layout_marginStart="245dp"
+            android:layout_marginTop="155dp"
             android:orientation="vertical"
+            android:textColor="#ffffff"
+            app:fontFamily="sans mono"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
             <Button
                 android:id="@+id/btnAcaoChamado"
                 android:layout_width="match_parent"
-                android:textColor="#ffffff"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonshape"
                 android:text="Enviar"
-                app:fontFamily="cursive" />
+                android:textColor="#ffffff"
+                app:fontFamily="sans mono" />
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
