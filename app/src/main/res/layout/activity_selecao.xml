@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/logophatt"
+    android:background="#0d412a"
     >
 
     <android.support.constraint.ConstraintLayout
@@ -17,6 +17,7 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="30dp"
             android:orientation="vertical"
+            android:textColor="#ffffff"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,14 +28,19 @@
                 android:layout_width="match_parent"
                 android:textColor="#ffffff"
                 android:layout_height="wrap_content"
-                app:fontFamily="cursive"
+                android:textSize="20sp"
+                app:fontFamily="sans mono"
                 android:text="Selecione o pet" />
 
             <ListView
                 android:id="@+id/listPets"
                 android:layout_width="match_parent"
+                android:layout_height="197dp"
+                android:background="#ffffff"
+                android:cacheColorHint="#ffffff"
                 android:textColor="#ffffff"
-                android:layout_height="197dp" />
+                android:textSize="16sp"
+                app:fontFamily="sans mono" />
 
         </LinearLayout>
 
@@ -44,7 +50,7 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="30dp"
             android:orientation="vertical"
-            app:fontFamily="cursive"
+            android:textColor="#ffffff"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +62,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
                 android:text="Selecione o serviço"
-                app:fontFamily="cursive"/>
+                android:textSize="20sp"
+                app:fontFamily="sans mono"/>
 
             <CheckBox
                 android:id="@+id/cbBanho"
@@ -64,7 +71,9 @@
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
                 android:text="Banho"
-                app:fontFamily="cursive"/>
+                android:textSize="20sp"
+                android:buttonTint="#ffffff"
+                app:fontFamily="sans mono"/>
 
             <CheckBox
                 android:id="@+id/cbBanhoMedicinal"
@@ -72,7 +81,9 @@
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
                 android:text="Banho medicinal"
-                app:fontFamily="cursive" />
+                android:textSize="20sp"
+                android:buttonTint="#ffffff"
+                app:fontFamily="sans mono" />
 
             <CheckBox
                 android:id="@+id/cbTosaHigienica"
@@ -80,7 +91,9 @@
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
                 android:text="Tosa Higiênica"
-                app:fontFamily="cursive"/>
+                android:textSize="20sp"
+                android:buttonTint="#ffffff"
+                app:fontFamily="sans mono"/>
 
             <CheckBox
                 android:id="@+id/cbTosaTotal"
@@ -88,7 +101,9 @@
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
                 android:text="Tosa total"
-                app:fontFamily="cursive"/>
+                android:textSize="20sp"
+                android:buttonTint="#ffffff"
+                app:fontFamily="sans mono"/>
         </LinearLayout>
 
         <LinearLayout
@@ -110,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:text="Enviar"
                 android:background="@drawable/buttonshape"
-                app:fontFamily="cursive" />
+                app:fontFamily="sans mono" />
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
