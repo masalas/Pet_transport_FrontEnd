@@ -115,14 +115,12 @@ public class SelecaoActivity extends Activity {
 
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
-
+                                        finish();
                                     }
                                 }
                         );
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                        //finish();
-
                     }
                 }
 

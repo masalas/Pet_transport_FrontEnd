@@ -49,13 +49,13 @@ public class ActivityCadastroPet extends Activity {
 
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-
+                                finish();
                             }
                         }
                 );
                 AlertDialog alertDialog = alerta.create();
                 alertDialog.show();
-                //finish();
+
             }
         });
     }
